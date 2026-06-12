@@ -1,0 +1,44 @@
+# =============================================================================
+# CPU-Optimized Real-Time Object Detection - Requirements
+# =============================================================================
+# Python 3.10+ required
+# Install with: pip install -r requirements.txt
+# =============================================================================
+
+# --- Core AI / Vision ---
+# ultralytics: Model management, weights download, and ONNX export
+ultralytics>=8.3.0
+
+# onnxruntime: CPU-optimized inference engine (uses AVX2/AVX-512 vectorization)
+# NOTE: Do NOT install onnxruntime-gpu — we are targeting CPU-only performance
+onnxruntime>=1.19.0
+
+# OpenCV (headless = no GUI window dependencies, lighter install)
+opencv-python-headless>=4.10.0
+
+# numpy: Array operations for pre/post-processing
+numpy>=1.26.0
+
+# --- Backend / API ---
+# FastAPI: Lightweight ASGI web framework for frame serving endpoint
+fastapi>=0.115.0
+
+# Uvicorn: ASGI server to run FastAPI
+uvicorn[standard]>=0.32.0
+
+# python-multipart: Required by FastAPI for form data handling
+python-multipart>=0.0.12
+
+# --- Frontend / UI ---
+# Streamlit: Browser-based UI for live video feed and metrics
+streamlit>=1.40.0
+
+# --- Utilities ---
+# Pillow: Image handling (used by Streamlit's st.image)
+Pillow>=11.0.0
+
+# requests: HTTP client (used internally by ultralytics for model downloads)
+requests>=2.32.0
+
+# psutil: System resource monitoring (CPU %, memory usage display)
+psutil>=6.1.0
