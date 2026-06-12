@@ -1,5 +1,7 @@
 # CPU-Optimized Real-Time Object Detection System
 
+![App Screenshot](screenshot.png)
+
 A high-performance, real-time object detection application optimized specifically for standard CPUs — **no NVIDIA GPU required**.
 
 ---
